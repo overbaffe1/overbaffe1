@@ -1,2 +1,3 @@
 exhibits/*.stl binary
 assets/postcard*.svg linguist-generated=true
+assets/qaoa-proof.svg linguist-generated=true

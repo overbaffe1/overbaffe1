@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220" width="310" height="220" role="img" aria-labelledby="title desc">
+  <title id="title">08 · Время одного безусловного прохода</title>
+  <desc id="desc">Две полосы от общего нуля: 2,993 секунды для эталона и 0,297 секунды для одного токена. Длина полос пропорциональна времени, а не числу токенов.</desc>
+  <defs>
+    <pattern id="dot" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M2.5 3h1" stroke="#b39e87"/></pattern>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0v6" stroke="#e3b48c" stroke-width="1.5"/></pattern>
+  </defs>
+  <path fill="#efdbc4" d="M0 0h310v220H0z"/><path fill="url(#dot)" d="M9 9h292v202H9z"/><rect x="8.5" y="8.5" width="293" height="203" fill="none" stroke="#a88e77"/>
+  <g stroke="#c3aa94" stroke-dasharray="2 4"><path d="M56 46v123m66-123v123m66-123v123m66-123v123"/></g>
+  <g fill="#58483d" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="13"><text x="55" y="70">4 101</text><text x="255" y="70" text-anchor="end">2,993 с</text><text x="55" y="123">1</text><text x="255" y="123" text-anchor="end">0,297 с</text></g>
+  <g transform="translate(56 78)"><path d="M0 0h197.55v18H0z" fill="#9c584b"/><path d="M0 0h197.55v18H0z" fill="url(#hatch)"/><path d="M0 18h197.55" stroke="#643f38" stroke-width="2"/></g>
+  <g transform="translate(56 131)"><path d="M0 0h19.61v18H0z" fill="#476a67"/><path d="M0 18h19.61" stroke="#254c4c" stroke-width="2"/></g>
+  <path d="M56 166h198M56 162v8m66-8v8m66-8v8m66-8v8" fill="none" stroke="#66584c" stroke-width="1.2"/>
+  <g fill="#635346" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="11" text-anchor="middle"><text x="56" y="184">0</text><text x="122" y="184">1</text><text x="188" y="184">2</text><text x="254" y="184">3 с</text></g>
+  <g fill="#503f3b" font-family="Consolas,'DejaVu Sans Mono',monospace"><text x="19" y="32" font-size="16">08</text><text x="290" y="202" text-anchor="end" font-size="13">∆t</text></g>
+</svg>
