@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220" width="310" height="220" role="img" aria-labelledby="title">
+  <title id="title">Второй оттиск. Кристалл: грани и рёбра</title>
+  <defs>
+    <pattern id="plate" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".85" fill="#9d7963"/></pattern>
+    <pattern id="cut" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(33)"><path d="M0 0v5" stroke="#72493e" stroke-width="1.6"/></pattern>
+  </defs>
+  <path fill="#ebc5a2" d="M0 0h310v220H0z"/>
+  <path fill="url(#plate)" d="M9 9h292v202H9z"/>
+  <rect x="8.5" y="8.5" width="293" height="203" fill="none" stroke="#a4816b"/>
+  <g fill="none" stroke="#ae8773" stroke-width="1">
+    <ellipse cx="155" cy="117" rx="94" ry="26" transform="rotate(-13 155 117)" stroke-dasharray="2 4"/>
+    <path d="m90 166 123-98m-57-50v181m-78-79h155" stroke-dasharray="8 5 1 5"/>
+  </g>
+  <ellipse cx="167" cy="188" rx="37" ry="4" fill="#b08f78"/>
+  <g stroke="#523f3b" stroke-width="1.7" stroke-linejoin="round">
+    <path d="m170 29-72 97 53 58 65-79Z" fill="#b85d42"/>
+    <path d="m170 29-72 97 62 10Z" fill="#f6e3b9"/>
+    <path d="m170 29-10 107 56-31Z" fill="#d4835c"/>
+    <path d="m98 126 62 10-9 48Z" fill="#ce8969"/>
+    <path d="m160 136 56-31-65 79Z" fill="#765348"/>
+    <path d="m170 29-10 107 56-31Z" fill="url(#cut)" stroke="none"/>
+  </g>
+  <g fill="none" stroke="#f9dbac" stroke-width="1.2"><path d="m175 154 26-38-31 18m15 1 13-14m-22 18 13-13"/></g>
+  <g fill="#503e39" font-family="Consolas,'DejaVu Sans Mono',monospace"><text x="19" y="32" font-size="16">02</text><text x="290" y="202" text-anchor="end" font-size="13">STL</text></g>
+</svg>

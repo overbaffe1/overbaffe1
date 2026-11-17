@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220" width="310" height="220" role="img" aria-labelledby="title">
+  <title id="title">Третий оттиск. Два талона с разными номерами брони</title>
+  <defs>
+    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r=".7" fill="#78938f" opacity=".7"/></pattern>
+    <pattern id="bars" width="12" height="20" patternUnits="userSpaceOnUse"><path fill="#395553" d="M0 0h2v20H0zm3 0h1v20H3zm4 0h3v20H7z"/></pattern>
+  </defs>
+  <path fill="#bdd0c5" d="M0 0h310v220H0z"/><path fill="url(#dots)" d="M9 9h292v202H9z"/>
+  <rect x="8.5" y="8.5" width="293" height="203" fill="none" stroke="#7e9890"/>
+  <g font-family="Consolas,'DejaVu Sans Mono',monospace" fill="#284c4a">
+    <g transform="translate(47 68) rotate(-14)">
+      <path d="M0 0h144v19a6 6 0 0 0 0 12v18H0V31a6 6 0 0 0 0-12Z" fill="#859e95" transform="translate(2 3)"/>
+      <path d="M0 0h144v19a6 6 0 0 0 0 12v18H0V31a6 6 0 0 0 0-12Z" fill="#f5edd7" stroke="#456461" stroke-width="1.4"/>
+      <path d="M104 1v47" stroke="#819b91" stroke-dasharray="3 3"/><path d="M115 9h17v31h-17z" fill="url(#bars)"/>
+      <text x="14" y="19" font-size="9" letter-spacing="1.6">КОНТЕКСТ</text><text x="14" y="36" font-weight="bold" font-size="17">EHGLP3</text>
+    </g>
+    <path d="M70 132q-1 24 24 24m-6-4 7 4-7 4" fill="none" stroke="#496969" stroke-width="1.7"/>
+    <g transform="translate(114 104) rotate(8)">
+      <path d="M0 0h144v19a6 6 0 0 0 0 12v18H0V31a6 6 0 0 0 0-12Z" fill="#859e95" transform="translate(2 3)"/>
+      <path d="M0 0h144v19a6 6 0 0 0 0 12v18H0V31a6 6 0 0 0 0-12Z" fill="#efdfbc" stroke="#456461" stroke-width="1.4"/>
+      <path d="M104 1v47" stroke="#819b91" stroke-dasharray="3 3"/><path d="M115 9h17v31h-17z" fill="url(#bars)"/>
+      <text x="14" y="17" font-size="9" letter-spacing="1.5">ДЕЙСТВИЕ</text><text x="14" y="36" font-weight="bold" font-size="17" fill="#963f31">ZZ9ZZZ</text>
+      <path d="M10 26q3-9 31-10t43 9q2 11-25 14t-46-4q-5-3-3-9Z" fill="none" stroke="#bb5039" stroke-width="1.4" transform="rotate(-4 47 31)"/>
+    </g>
+    <text x="19" y="32" font-size="16">03</text><text x="290" y="202" text-anchor="end" font-size="13">TEST</text>
+  </g>
+</svg>
