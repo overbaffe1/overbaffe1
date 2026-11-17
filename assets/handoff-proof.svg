@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220" width="310" height="220" role="img" aria-labelledby="title desc">
+  <title id="title">04 · Петля ожидания</title>
+  <desc id="desc">Две станции связаны встречными стрелками. На четвёртом ходу A ждёт B, на седьмом B ждёт A. Учебная схема правила deadlock.</desc>
+  <defs>
+    <pattern id="paper" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r=".8" fill="#9c929f"/></pattern>
+    <pattern id="cut" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><path d="M0 0v5" stroke="#c5bcc0" stroke-width="1.5"/></pattern>
+  </defs>
+  <path fill="#dcd3d7" d="M0 0h310v220H0z"/><path fill="url(#paper)" d="M9 9h292v202H9z"/>
+  <rect x="8.5" y="8.5" width="293" height="203" fill="none" stroke="#978695"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M93 112V91c0-55 119-55 119-2" stroke="#613f52" stroke-width="2.7"/>
+    <path d="m204 83 8 8 5-10" stroke="#613f52" stroke-width="2.7"/>
+    <path d="M216 110v19c0 53-119 54-119 3" stroke="#406669" stroke-width="2.7"/>
+    <path d="m91 141 6-11 7 9" stroke="#406669" stroke-width="2.7"/>
+    <path d="M100 80c10-20 38-29 60-27m51 90c-14 20-40 27-62 25" stroke="#a99aa2" stroke-width="1"/>
+  </g>
+  <g fill="#f7edd7" stroke="#564650" stroke-width="1.6">
+    <path d="m54 94 69-6 3 39-68 6z"/><path d="m180 89 68 6-4 39-68-7z"/>
+  </g>
+  <g fill="url(#cut)" stroke="#988b8e" stroke-width=".9"><path d="m56 95 36 19 28-25"/><path d="m181 90 30 25 34-19"/></g>
+  <g stroke-width="1.5"><circle cx="92" cy="112" r="15" fill="#65465b" stroke="#eee2c9"/><circle cx="211" cy="113" r="15" fill="#3f6868" stroke="#eee2c9"/></g>
+  <g font-family="Georgia,'DejaVu Serif',serif" font-size="19" font-style="italic" fill="#f7eed7" text-anchor="middle"><text x="92" y="118">A</text><text x="211" y="119">B</text></g>
+  <g font-family="Consolas,'DejaVu Sans Mono',monospace" text-anchor="middle">
+    <path d="M133 42h42v17h-42zM133 159h42v17h-42z" fill="#dcd3d7"/>
+    <text x="154" y="54" fill="#65465b" font-size="13">t = 4</text><text x="154" y="173" fill="#385859" font-size="13">t = 7</text>
+  </g>
+  <g fill="#4c404a" font-family="Consolas,'DejaVu Sans Mono',monospace"><text x="19" y="32" font-size="16">04</text><text x="290" y="202" text-anchor="end" font-size="13">LOG</text></g>
+</svg>

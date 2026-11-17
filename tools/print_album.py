@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INK = '#173c42'
 VERMILION = '#b94932'
+COLLECTION = 'КОЛЛЕКЦИЯ 01—09'
 MONO = "'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace"
 SERIF = "Georgia,'DejaVu Serif','Times New Roman',serif"
 SANS = "'Segoe UI',Arial,'DejaVu Sans',sans-serif"
@@ -83,7 +84,7 @@ def postcard(compact, motion):
         {heading(25, 24, .95)}
         <text x="24" y="101" font-family="{SERIF}" font-size="35" letter-spacing="-1.6" fill="{INK}">Альбом открытого кода.</text>
         <path d="M26 119h428" stroke="#bcb7a0"/>
-        <text transform="translate(38 355) rotate(-90)" font-family="{MONO}" font-size="13" letter-spacing="2" fill="#48635f">КОЛЛЕКЦИЯ 01—03</text>
+        <text transform="translate(38 355) rotate(-90)" font-family="{MONO}" font-size="13" letter-spacing="2" fill="#48635f">{COLLECTION}</text>
         <g transform="translate(168 142) rotate(5 145 142) scale(.827)"><use href="#paper-edge" x="2.8" y="3" fill="#a9997f" opacity=".4"/><use href="#stamp"/></g>
         <use href="#postmark" transform="translate(112 317) rotate(-12) scale(.86)" opacity=".79"/>
         <path d="M26 426h428" stroke="#bcb7a0"/>
@@ -95,10 +96,10 @@ def postcard(compact, motion):
         <text x="49" y="168" font-family="{SERIF}" font-size="97" letter-spacing="-5" fill="{INK}">Альбом</text>
         <text x="50" y="248" font-family="{SERIF}" font-style="italic" font-size="81" letter-spacing="-4.4" fill="{INK}">открытого кода<tspan fill="{VERMILION}">.</tspan></text>
         <path d="M54 290h32" stroke="{VERMILION}" stroke-width="2.2"/>
-        <text x="100" y="297" font-family="{SANS}" font-size="21" fill="#415a55">От маяка на слайде до проверки слов ИИ.</text>
+        <text x="100" y="297" font-family="{SANS}" font-size="21" fill="#415a55">От маяка на слайде до запасов на орбите.</text>
         <path d="M54 345h600" stroke="#a8a793" stroke-width="1"/>
         <g font-family="{MONO}" font-size="13" letter-spacing="1.5" fill="#3c5955">
-          <text x="54" y="376">КОЛЛЕКЦИЯ 01—03</text>
+          <text x="54" y="376">{COLLECTION}</text>
           <text x="654" y="376" text-anchor="end">ОТКРЫТЬ МАЯК В 3D ↗</text>
         </g>
         <g transform="translate(736 38) rotate(6 155 160) scale(1.04)"><use href="#paper-edge" x="3" y="4" fill="#998972" opacity=".3"/><use href="#stamp"/></g>
