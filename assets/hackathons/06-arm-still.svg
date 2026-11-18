@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="352" height="180" viewBox="0 0 352 180" role="img" aria-labelledby="title desc">
+<title id="title">06 · Green-Challenge</title><desc id="desc">Шарнирная рука переносит медный кубик.</desc>
+<!-- Printed by tools/print_hackathons.py; all artwork is local. -->
+<defs>
+  <linearGradient id="ink" x2="1" y2="1"><stop stop-color="#c4d4bf"/><stop offset="1" stop-color="#89a99c"/></linearGradient>
+  <pattern id="fleck" width="19" height="13" patternUnits="userSpaceOnUse"><path d="M2 5h1m7 5h.7m6-8h.8" stroke="#e8d5ad" stroke-width=".7" opacity=".39"/><circle cx="5" cy="11" r=".5" fill="#182e3b" opacity=".4"/></pattern>
+  <clipPath id="gate"><path d="M0 0h320v120H0z"/></clipPath>
+</defs>
+<path d="M6 1h340q5 0 5 5v126a5 5 0 0 0 0 10v32q0 5-5 5H6q-5 0-5-5v-32a5 5 0 0 0 0-10V6q0-5 5-5Z" fill="#f3e9d2" stroke="#bbae94" stroke-width="1.3"/>
+<rect x="12.5" y="8.5" width="327" height="127" fill="none" stroke="#9c9c85" stroke-width=".8"/>
+<g transform="translate(16 12)"><g clip-path="url(#gate)"><path fill="url(#ink)" d="M0 0h320v120H0z"/>
+<defs><path id="upper" d="M68 99L79.05 21.79"></path><path id="lower" d="M79.05 21.79L137 74"></path><path id="jaw" d="M-11 3v14l3 2M11 3v14l-3 2"></path></defs>
+<g fill="none" stroke="#637e72" stroke-width=".8"><path d="M19 102h279m-265 5h253M24 48h16m-8-8v16m223-28h18m-9-9v18"/><path d="M68 21a78 78 0 0 1 78 78m77 0a155 155 0 0 0-24-84" stroke-dasharray="2 4"/></g>
+<path d="m41 103 4-9h45l4 9zm81-2h31v4h-31zm75 0h32v4h-32z" fill="#426158"/>
+<g transform="translate(137 91)"><path d="m-7-5 7-4 7 4v12l-7 3-7-4z" fill="#d1764d" stroke="#594c3f"/><path d="m-7-5 7 3 7-3-7-4z" fill="#f0c490"/><path d="M0-1v10" stroke="#a3573e"/></g><g fill="none" stroke-linecap="round"><use href="#upper" stroke="#2e514e" stroke-width="14"/><use href="#upper" stroke="#dfb986" stroke-width="10"/><use href="#upper" stroke="#f2d6a6" stroke-width="2"/><use href="#lower" stroke="#2e514e" stroke-width="14"/><use href="#lower" stroke="#dfb986" stroke-width="10"/><use href="#lower" stroke="#f2d6a6" stroke-width="2"/></g>
+<g transform="translate(68 99)"><circle r="7.3" fill="#42605a" stroke="#edd2a7" stroke-width="1.9"/><circle r="3" fill="#d08361"/></g><g transform="translate(79.05 21.79)"><circle r="7.3" fill="#42605a" stroke="#edd2a7" stroke-width="1.9"/><circle r="3" fill="#d08361"/></g><g transform="translate(137 74)"><path d="M-10-1H10v5h-20z" fill="#36544e"/><use href="#jaw" stroke="#324f49" stroke-width="3" fill="none"/><circle r="4.4" fill="#c97955" stroke="#e4cfad"/></g>
+<path d="M0 0h320v120H0z" fill="url(#fleck)"/>
+<path d="M5 14V5h9m292 0h9v9m0 92v9h-9m-292 0H5v-9" stroke="#d9c9a6" stroke-width=".8" opacity=".72" fill="none"/>
+</g></g>
+<path d="M15 142h322" stroke="#bcae91" stroke-width=".8" stroke-dasharray="2 3"/>
+<text x="17" y="165" font-family="Consolas,'DejaVu Sans Mono',monospace" font-size="14" letter-spacing=".8" fill="#93533f">06</text>
+<path d="M43 150v19" stroke="#b9af95"/>
+<text x="54" y="166" font-family="'Segoe UI',Arial,'DejaVu Sans',sans-serif" font-weight="600" font-size="23" letter-spacing="-.6" fill="#1c4044">Green-Challenge</text>
+<path d="m322 164 9-10m-8 0h8v8" fill="none" stroke="#776b55" stroke-width="1.4"/>
+</svg>
