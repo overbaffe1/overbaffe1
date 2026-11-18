@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="60" viewBox="0 0 640 60" role="img" aria-labelledby="title desc">
+  <title id="title">AI Challenge 2026 · фазовая виньетка</title>
+  <desc id="desc">Медная и сиреневая волны на сливовой ленте. В ромбической оправе между ними выгравирована фигура Лиссажу.</desc>
+  <defs>
+    <linearGradient id="enamel" x2="0" y2="1"><stop stop-color="#63495a"/><stop offset=".55" stop-color="#453a50"/><stop offset="1" stop-color="#5a4150"/></linearGradient>
+    <pattern id="ruling" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0h8M0 0v8" fill="none" stroke="#d5baa4" stroke-width=".6" opacity=".28"/></pattern>
+    <path id="ribbon" d="M3 30 15 17h257l12-5h72l12 5h257l12 13-12 13H368l-12 5h-72l-12-5H15Z"/>
+    <clipPath id="trim"><use href="#ribbon"/></clipPath>
+    <g id="waves" fill="none" stroke-linecap="round">
+      <path d="M10 30q12-17 24 0t24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0" stroke="#ebb78b" stroke-width="1.6"/>
+      <path d="M10 30q12 15 24 0t24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0 24 0" stroke="#c2b4ce" stroke-width="1.2"/>
+      <path d="M15 30h284" stroke="#dcc5a9" stroke-width=".7" stroke-dasharray="1 4"/>
+    </g>
+  </defs>
+  <use href="#ribbon" fill="url(#enamel)" stroke="#af9577" stroke-width="1.3"/>
+  <g clip-path="url(#trim)">
+    <use href="#ribbon" fill="url(#ruling)"/><use href="#waves"/><use href="#waves" transform="translate(640 0) scale(-1 1)"/>
+    <path d="M12 19h260l12-5h72l12 5h260M12 41h260l12 5h72l12-5h260" fill="none" stroke="#d6bda1" stroke-width=".7"/>
+  </g>
+  <g transform="translate(320 30)" stroke-linejoin="round">
+    <path d="m-4-28 8 0 27 25v6L4 28h-8L-31 3v-6Z" fill="#ead0aa" stroke="#a08b76"/>
+    <path d="m0-24 27 24L0 24-27 0Z" fill="#473749" stroke="#977d71"/>
+    <g fill="none"><path d="M-18 0h36M0-16v32" stroke="#b2a3ad" stroke-width=".7" stroke-dasharray="1 2.5"/>
+      <path d="M0 0C4.19 4.12 8.35 8.12 11.31 9.7C14.28 11.28 16 10.34 16 7.42C16 4.51 14.28 -0.21 11.31 -4.02C8.35 -7.83 4.19 -10.5 0 -10.5C-4.19 -10.5 -8.35 -7.83 -11.31 -4.02C-14.28 -0.21 -16 4.51 -16 7.42C-16 10.34 -14.28 11.28 -11.31 9.7C-8.35 8.12 -4.19 4.12 0 0" stroke="#eebf94" stroke-width="1.5"/>
+      <path d="M0 0C4.19 -4.12 8.35 -8.12 11.31 -9.7C14.28 -11.28 16 -10.34 16 -7.42C16 -4.51 14.28 0.21 11.31 4.02C8.35 7.83 4.19 10.5 0 10.5C-4.19 10.5 -8.35 7.83 -11.31 4.02C-14.28 0.21 -16 -4.51 -16 -7.42C-16 -10.34 -14.28 -11.28 -11.31 -9.7C-8.35 -8.12 -4.19 -4.12 0 0" stroke="#c8b7cc" stroke-width="1.2"/>
+    </g><circle r="1.9" fill="#f6d5a6"/>
+  </g>
+</svg>

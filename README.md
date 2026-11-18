@@ -11,7 +11,7 @@
 
 Я пишу на Python: строю 3D-сцены, разбираю журналы ИИ-агентов и готовлю данные для роботов.
 
-**В альбоме:** [01 · Маяк](#01--маяк-на-слайде) · [02 · Кристалл](#02--восемь-граней-внутри-readme) · [03–09 · Хакатоны](#участие-в-хакатонах)
+**В альбоме:** [01 · Маяк](#01--маяк-на-слайде) · [02 · Кристалл](#02--восемь-граней-внутри-readme) · [03–11 · Хакатоны](#участие-в-хакатонах)
 
 ## 01 · Маяк на слайде
 
@@ -100,7 +100,7 @@ endsolid field_crystal
 
 ## Участие в хакатонах
 
-<h3 align="center"><picture><img src="art/dividers/ai-journey.svg" width="640" alt=""></picture><br>AI Journey Contest 2026</h3>
+<h3 align="center"><picture><img src="art/dividers/ai-journey.svg" width="640" alt=""></picture><br><a href="https://dsworks.ru/group/aij2026">AI Journey Contest 2026</a></h3>
 
 <p align="center">
   <a href="https://github.com/overbaffe1/Guardian-of-Truth"><picture>
@@ -119,10 +119,6 @@ endsolid field_crystal
     <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/06-arm.svg">
     <img src="assets/hackathons/06-arm-still.svg" width="268" alt="06 · Green-Challenge">
   </picture></a>
-  <a href="https://github.com/overbaffe1/QAOA"><picture>
-    <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/07-relief.svg">
-    <img src="assets/hackathons/07-relief-still.svg" width="268" alt="07 · QAOA">
-  </picture></a>
   <a href="https://github.com/overbaffe1/3D-DIT-Distillation"><picture>
     <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/08-voxels.svg">
     <img src="assets/hackathons/08-voxels-still.svg" width="268" alt="08 · 3D-DIT-Distillation">
@@ -135,6 +131,23 @@ endsolid field_crystal
   <a href="https://github.com/overbaffe1/CosmoH"><picture>
     <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/09-orbit.svg">
     <img src="assets/hackathons/09-orbit-still.svg" width="268" alt="09 · CosmoH">
+  </picture></a>
+  <a href="https://github.com/overbaffe1/AUSG"><picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/10-contact.svg">
+    <img src="assets/hackathons/10-contact-still.svg" width="268" alt="10 · AUSG">
+  </picture></a>
+  <a href="https://github.com/overbaffe1/OMLP"><picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/11-atlas.svg">
+    <img src="assets/hackathons/11-atlas-still.svg" width="268" alt="11 · OMLP">
+  </picture></a>
+</p>
+
+<h3 align="center"><picture><img src="art/dividers/ai-challenge.svg" width="640" alt=""></picture><br><a href="https://aiijc.com/ru/">AI Challenge 2026</a></h3>
+
+<p align="center">
+  <a href="https://github.com/overbaffe1/QAOA"><picture>
+    <source media="(prefers-reduced-motion: no-preference)" srcset="assets/hackathons/07-relief.svg">
+    <img src="assets/hackathons/07-relief-still.svg" width="268" alt="07 · QAOA">
   </picture></a>
 </p>
 

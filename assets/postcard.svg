@@ -142,10 +142,10 @@
         <text x="49" y="168" font-family="Georgia,'DejaVu Serif','Times New Roman',serif" font-size="97" letter-spacing="-5" fill="#173c42">Альбом</text>
         <text x="50" y="248" font-family="Georgia,'DejaVu Serif','Times New Roman',serif" font-style="italic" font-size="81" letter-spacing="-4.4" fill="#173c42">открытого кода<tspan fill="#b94932">.</tspan></text>
         <path d="M54 290h32" stroke="#b94932" stroke-width="2.2"/>
-        <text x="100" y="297" font-family="'Segoe UI',Arial,'DejaVu Sans',sans-serif" font-size="21" fill="#415a55">Маяк, кристалл и семь марок с хакатонов.</text>
+        <text x="100" y="297" font-family="'Segoe UI',Arial,'DejaVu Sans',sans-serif" font-size="21" fill="#415a55">Маяк, кристалл и девять марок с хакатонов.</text>
         <path d="M54 345h600" stroke="#a8a793" stroke-width="1"/>
         <g font-family="'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="13" letter-spacing="1.5" fill="#3c5955">
-          <text x="54" y="376">КОЛЛЕКЦИЯ 01—09</text>
+          <text x="54" y="376">КОЛЛЕКЦИЯ 01—11</text>
           <text x="654" y="376" text-anchor="end">ОТКРЫТЬ МАЯК В 3D ↗</text>
         </g>
         <g transform="translate(736 38) rotate(6 155 160) scale(1.04)"><use href="#paper-edge" x="3" y="4" fill="#998972" opacity=".3"/><use href="#stamp"/></g>

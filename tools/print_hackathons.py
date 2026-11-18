@@ -1,9 +1,10 @@
-"""Print seven kinetic stamps and their matching stills. No network or packages."""
+"""Print the kinetic stamps and their matching stills. No network or packages."""
 
 import json
 import math
 from collections.abc import Callable
 from dataclasses import dataclass
+from itertools import groupby
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -282,6 +283,92 @@ def orbit(m):
 </g>'''
 
 
+def contact_sheet(m):
+    """A radio dish and seven downlink tracks on the same clock."""
+    # First 12 ticks of P01_intro, rows S01/S02/S03/S04/S12/S13/S16.
+    slots = (4, 3, 2, 0, 10, 9, 5)
+    start, pitch = 153, 11
+    rows = []
+    for i, slot in enumerate(slots):
+        y = 29 + 9 * i
+        rows.append(f'<path d="M{start} {y}h132" stroke="#6f938b" stroke-width=".75"/>'
+                    f'<use href="#window" x="{start + pitch * slot + 1}" y="{y - 2.7}"/>')
+    ticks = ''.join(f'M{start + i * pitch} 23v65' for i in range(13))
+    stops = [0, .38, .77, 1]
+    cursor = [f'{start + pitch * i} 0' for i in (4.5, 11.5, .5, 4.5)]
+    scan = m.tween('translate', cursor, 9.6, transform=True, times=stops, eased=True)
+    tilt = m.tween('rotate', [14, 36, -16, 14], 9.6, transform=True, times=stops, eased=True)
+    return f'''<defs>
+  <g id="window"><rect width="9" height="5.4" rx=".8" fill="#e8b77d"/><path d="M2 1.4h4.8" stroke="#fff0be" stroke-width=".7"/></g>
+</defs>
+<g fill="none" stroke="#6c7b72" stroke-width=".9"><path d="M-9 72Q44 2 126 11m-132 69q71-83 141-63" stroke-dasharray="2 4"/>
+  <path d="M-6 96q23-16 47-9t47 0 49 4m-142 14q44-16 87-4t59-2"/></g>
+<path d="M25 104h87m-81 3h74" fill="none" stroke="#726d5b"/>
+<g transform="translate(71 67)" stroke="#324d50" stroke-linejoin="round">
+  <path d="m-24 35 18-34h10l21 34h-7L0 9l-17 26Z" fill="#65817a" stroke-width="1.8"/>
+  <path d="m-18 32 29-13m-24 4 29 9m-42 2h53v4h-53z" fill="#ae8d69"/>
+  <g transform="rotate(14)">{tilt}
+    <path d="M-32-14Q-13 23 9 13q14-5 23-27Z" fill="#628d87" stroke-width="1.7"/>
+    <path d="M-32-14Q0-25 32-14Q3 17-32-14Z" fill="#ebd8ae" stroke-width="1.5"/>
+    <g fill="none" stroke="#8b947f" stroke-width=".8"><path d="M-26-14q26 19 50 1m-43-3q18 12 37 1m-27-2q10 5 21 0M-14-17l7 13m6-14 2 15m12-15-5 13"/></g>
+    <path d="m-29-14 29-19 29 19M0-31v28" fill="none" stroke-width="1.5"/>
+    <ellipse cy="-33" rx="3.6" ry="2.3" fill="#cc845e"/>
+    <path d="M-7-40q7-5 14 0m-18-5q11-7 22 0" fill="none" stroke="#567a77" stroke-width="1.35"/>
+  </g><circle r="4.1" fill="#d7956c"/><circle r="1.4" fill="#e9d4a6"/>
+</g>
+<path d="M142 14h145l7 7v71l-6 6H143l-7-7V21Z" fill="#24434a" stroke="#645f50" stroke-width="1.8"/>
+<path d="M145 18h140l5 5v67l-4 4H145l-5-5V23Z" fill="none" stroke="#b4b89a" stroke-width=".8"/>
+<path d="{ticks}" fill="none" stroke="#71918d" stroke-width=".65" stroke-dasharray="1.2 2.7"/>
+{''.join(rows)}
+<g transform="translate({cursor[0]})">{scan}<path d="M-3 22h6v67h-6Z" fill="#f4d59d" opacity=".16"/>
+  <path d="M0 22v67" stroke="#f6dbb1" stroke-width="1.15"/><path d="m-3 19 3 5 3-5zm0 73 3-5 3 5z" fill="#db9570"/></g>'''
+
+
+def swatch_print(rows, colors):
+    """Print runs of equal ink as horizontal cuts rather than hundreds of rects."""
+    cuts = [[] for _ in colors]
+    for y, row in enumerate(rows):
+        x = 0
+        for color, run in groupby(row):
+            n = sum(1 for _ in run)
+            if color != '0':
+                cuts[int(color)].append(f'M{x} {y}h{n}v1h-{n}z')
+            x += n
+    base = f'<rect width="{len(rows[0])}" height="{len(rows)}" fill="{colors[0]}"/>'
+    return base + ''.join(f'<path d="{"".join(paths)}" fill="{ink}"/>'
+                          for ink, paths in zip(colors, cuts) if paths)
+
+
+def burn_atlas(m):
+    """Two leaves of one atlas: spectral print and registered severity overlay."""
+    chip = json.loads((ROOT / 'exhibits/omlp-chip-95.json').read_text(encoding='utf-8'))
+    tones = swatch_print(chip['dnbr_tones'], ('#294b50', '#47706b', '#769381', '#aab997', '#e6d5a6'))
+    burn = swatch_print(chip['severity'], ('#354b47', '#c4b276', '#dca273', '#af644f'))
+    widths = [17, 27, 2, 17]
+    travel = m.tween('width', widths, 8.4, eased=True)
+    positions = [f'{w} 0' for w in widths]
+    slide = m.tween('translate', positions, 8.4, transform=True, eased=True)
+    return f'''<defs>
+  <g id="tones" shape-rendering="crispEdges">{tones}</g><g id="severity" shape-rendering="crispEdges">{burn}</g>
+  <clipPath id="shutter"><rect width="17" height="28">{travel}</rect></clipPath>
+  <g id="leaf"><rect width="100" height="100" fill="#e5d5ad" stroke="#6f6b55"/>
+    <path d="M4 15V4h11m70 0h11v11m0 70v11H85m-70 0H4V85" fill="none" stroke="#ad9072"/>
+    <use href="#tones" transform="translate(8 8) scale(3)"/>
+    <path d="M7.5 7.5h85v85h-85Z" fill="none" stroke="#526e64" stroke-width=".75"/></g>
+  <g id="reader" transform="translate(17 0)">{slide}<path d="M0 0v28" stroke="#f4e2c4" stroke-width=".34"/>
+    <path d="m-1-1.2 1 1.8 1-1.8Zm0 30.4 1-1.8 1 1.8Z" fill="#bd7453" stroke="#614f42" stroke-width=".16"/></g>
+</defs>
+<g fill="none" stroke="#a8b298" stroke-width=".7" opacity=".65"><path d="M-9 94Q36 96 34 65T54 4m-63 83q39 2 37-28t24-59m-61 80q31 0 31-29T42 0M270 126q32-25 21-60t36-51m-64 111q32-28 22-60t40-58"/>
+  <path d="M16 23h12m-6-6v12m267 63h12m-6-6v12"/></g>
+<path d="m43 16 8-3 109 13 111-13 6 3v83l-117 14L43 100Z" fill="#203f3c" stroke="#c0b394" stroke-width="1.35"/>
+<path d="m47 95 113 13 113-13m-223 4 110 12 111-13" fill="none" stroke="#b19e7e" stroke-width=".9"/>
+<g transform="matrix(1.12 .12 0 .8 48 12)"><use href="#leaf"/>
+  <g transform="translate(8 8) scale(3)"><use href="#reader"/></g></g>
+<g transform="matrix(1.12 -.12 0 .8 160 24)"><use href="#leaf"/>
+  <g transform="translate(8 8) scale(3)"><g clip-path="url(#shutter)"><use href="#severity"/></g><use href="#reader"/></g></g>
+<path d="M157 24v80m6-80v80" stroke="#72684f" stroke-width=".85" opacity=".7"/>'''
+
+
 @dataclass(frozen=True)
 class Stamp:
     number: str
@@ -304,6 +391,8 @@ STAMPS = (
     Stamp('07','relief','QAOA',('#273e53','#173943'), 'Поворотная гравюра рельефа вероятности.',terrain),
     Stamp('08','voxels','3D-DIT-Distillation',('#e1cebd','#b89ca9'), 'Три слоя объёмного куба расходятся и собираются.',distillation,22),
     Stamp('09','orbit','CosmoH',('#1e2f44','#31545f'), 'Спутник проходит за планетой и возвращается на свет.',orbit),
+    Stamp('10', 'contact', 'AUSG', ('#ded1ae', '#b09c7d'), 'Антенна поворачивается, пока указатель проходит окна связи.', contact_sheet),
+    Stamp('11', 'atlas', 'OMLP', ('#3d5951', '#68775e'), 'В атласе гари шторка совмещает спектральный отпечаток с картой степеней повреждения.', burn_atlas),
 )
 
 

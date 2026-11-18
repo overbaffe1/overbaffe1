@@ -10,7 +10,12 @@
 
 Как у [марок в gitEdit](https://github.com/overbaffe1/gitEdit#марки-вместо-меню), рисунок движется, а подпись остаётся на месте. У каждой марки два отдельных SVG: петля и её первый кадр. `<picture>` выбирает петлю только при `prefers-reduced-motion: no-preference`.
 
-[Скрипт печати](../tools/print_hackathons.py) собирает семь пар из корня альбома (Python 3.10+, без сети и внешних пакетов):
+Номера закреплены за марками, а листы — за событиями. Поэтому № 07 (QAOA) стоит на отдельном листе [AI Challenge](https://aiijc.com/ru/about).
+
+- **10 / AUSG.** На шкале — окна связи из учебной [смены P01_intro](https://github.com/overbaffe1/AUSG/blob/3f5232e75f3ea9dc7bcdf076c78067e3f9ee8436/data/P01_intro.json): первые 12 шагов `downlink_available` для S01, S02, S03, S04, S12, S13 и S16. Антенна — иллюстрация, не траектория реального аппарата.
+- **11 / OMLP.** Шторка в атласе сравнивает две панели [одного чипа BS_tr_000095](https://github.com/overbaffe1/OMLP/blob/1a4aa4a40c62e6b5e06d3d1db4aa0c4e16094e7e/docs/figures/severity.png): индекс гари dNBR и ответ модели. В [сетке для печати](omlp-chip-95.json) 28 × 28 ячеек на панель: у индекса пять тонов по яркости рисунка, у ответа — преобладающий класс (0–3). Это миниатюра опубликованного сравнения, не новый прогноз.
+
+[Скрипт печати](../tools/print_hackathons.py) собирает девять пар из корня альбома (Python 3.10+, без сети и внешних пакетов):
 
 ```sh
 python3 tools/print_hackathons.py

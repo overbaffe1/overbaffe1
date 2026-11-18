@@ -141,7 +141,7 @@
     </g>
         <text x="24" y="101" font-family="Georgia,'DejaVu Serif','Times New Roman',serif" font-size="35" letter-spacing="-1.6" fill="#173c42">Альбом открытого кода.</text>
         <path d="M26 119h428" stroke="#bcb7a0"/>
-        <text transform="translate(38 355) rotate(-90)" font-family="'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="13" letter-spacing="2" fill="#48635f">КОЛЛЕКЦИЯ 01—09</text>
+        <text transform="translate(38 355) rotate(-90)" font-family="'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="13" letter-spacing="2" fill="#48635f">КОЛЛЕКЦИЯ 01—11</text>
         <g transform="translate(168 142) rotate(5 145 142) scale(.827)"><use href="#paper-edge" x="2.8" y="3" fill="#a9997f" opacity=".4"/><use href="#stamp"/></g>
         <use href="#postmark" transform="translate(112 317) rotate(-12) scale(.86)" opacity=".79"/>
         <path d="M26 426h428" stroke="#bcb7a0"/>

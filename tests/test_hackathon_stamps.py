@@ -1,4 +1,4 @@
-"""The seven repo links must work as a gallery even when motion is disabled."""
+"""Check each event's repo links, printed stamps and reduced-motion alternatives."""
 
 import unittest
 from html.parser import HTMLParser
@@ -18,7 +18,9 @@ class Gallery(HTMLParser):
         a = dict(attrs)
         if tag == 'h3':
             self.in_heading = True
-            self.groups.append({'title': '', 'dividers': [], 'cards': []})
+            self.groups.append({'title': '', 'links': [], 'dividers': [], 'cards': []})
+        elif self.in_heading and tag == 'a':
+            self.groups[-1]['links'].append(a['href'])
         elif self.in_heading and tag == 'img':
             self.groups[-1]['dividers'].append(a)
         elif tag == 'a':
@@ -49,23 +51,32 @@ class StampTests(unittest.TestCase):
         markup = (ROOT/'README.md').read_text(encoding='utf-8').split('## Участие в хакатонах\n')[1].split('\n## ')[0]
         gallery = Gallery()
         gallery.feed(markup)
-        events = [('AI Journey Contest 2026', 'ai-journey.svg', STAMPS[:6]),
-                  ('КосмоХакатон 2026', 'cosmohack.svg', STAMPS[6:])]
+        events = [
+            ('AI Journey Contest 2026', 'ai-journey.svg', ['https://dsworks.ru/group/aij2026'],
+             ['Guardian-of-Truth', 'Coordination-Referee', 'Vision-Action-Data-Factory',
+              'Green-Challenge', '3D-DIT-Distillation']),
+            ('КосмоХакатон 2026', 'cosmohack.svg', [], ['CosmoH', 'AUSG', 'OMLP']),
+            ('AI Challenge 2026', 'ai-challenge.svg', ['https://aiijc.com/ru/'], ['QAOA']),
+        ]
+        by_name = {stamp.name: stamp for stamp in STAMPS}
+        self.assertCountEqual([name for *_, names in events for name in names], by_name.keys())
         self.assertEqual(len(gallery.groups), len(events))
-        for group, (event, divider, stamps) in zip(gallery.groups, events):
+        for group, (event, divider, links, names) in zip(gallery.groups, events):
             with self.subTest(event=event):
                 self.assertEqual(group['title'].strip(), event)
+                self.assertEqual(group['links'], links)
                 self.assertEqual(len(group['dividers']), 1)
                 art = group['dividers'][0]
                 self.assertEqual(art['alt'], '')  # the actual heading is text
                 path = ROOT / art['src']
                 self.assertEqual(path.name, divider)
                 self.assertEqual(ET.parse(path).getroot().tag, '{http://www.w3.org/2000/svg}svg')
-                self.assertEqual(len(group['cards']), len(stamps))
-            for stamp, card in zip(stamps, group['cards']):
-                with self.subTest(stamp=stamp.name):
-                    self.assertEqual(card['href'], 'https://github.com/overbaffe1/' + stamp.name)
-                    self.assertIn(stamp.name, card['alt'])
+                self.assertEqual(len(group['cards']), len(names))
+            for name, card in zip(names, group['cards']):
+                with self.subTest(stamp=name):
+                    stamp = by_name[name]
+                    self.assertEqual(card['href'], 'https://github.com/overbaffe1/' + name)
+                    self.assertEqual(card['alt'], f'{stamp.number} · {name}')
                     self.assertEqual(card['media'], '(prefers-reduced-motion: no-preference)')
                     for attr, moving in [('src', False), ('srcset', True)]:
                         self.assertEqual(ROOT/card[attr], OUT/stamp.filename(moving))
