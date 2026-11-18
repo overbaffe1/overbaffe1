@@ -4,16 +4,29 @@
 
 **Марка и модель — две разные вещи.** Маяк на конверте — [векторная гравюра](../art/lighthouse.svg) по мотивам «Трёх чудес». А [маяк, который можно вращать](lighthouse.stl), — геометрия непосредственно из [модели MyWorkAiBrain](https://github.com/overbaffe1/MyWorkAiBrain/blob/83887965b2a98b5875a20dd4762a75758ba2e5ac/presentations/wow/models/glb/lighthouse.glb), в исходной позе. У STL нет материалов и анимации; прозрачное стекло и световые конусы убраны, чтобы не закрывать фонарь. Это экспонат для просмотра, не заготовка для 3D-печати. Миниатюра рядом с рассказом — уменьшенный [рендер той же сцены](https://github.com/overbaffe1/MyWorkAiBrain/blob/83887965b2a98b5875a20dd4762a75758ba2e5ac/presentations/wow/models/rasters/lighthouse-6516a9f808.png).
 
-**Листы 02–03.** Координаты кристалла взяты из [текстового STL в gitEdit](https://github.com/overbaffe1/gitEdit/blob/main/atlas/samples/crystal.stl). Номера на билетах — не данные пассажиров, а пара из [теста Guardian-of-Truth](https://github.com/overbaffe1/Guardian-of-Truth/blob/7def70e18a9b3398536575eb3245c97877362089/tests/test_signals.py#L50-L59).
+**Лист 02.** Координаты кристалла взяты из [текстового STL в gitEdit](https://github.com/overbaffe1/gitEdit/blob/main/atlas/samples/crystal.stl).
 
-## Что нарисовано на новых марках
+## Марки хакатонов
 
-- **04 / Переписка.** Две стрелки — условный пример для [правила `deadlock`](https://github.com/overbaffe1/Coordination-Referee/blob/72593fec80e6d42e4046d29ca7d84e95838d8835/sol/localize.py#L78-L90), а не выдержка из чужого диалога. Правило получает класс сбоя на вход и определяет ход.
-- **05 / Контактный лист.** Это чертёж в координатах [демокадра 256 × 256](https://github.com/overbaffe1/Vision-Action-Data-Factory/blob/afe7ed98c7f7db8efc27c06201b455788163a07a/data/final_input/libero_episode_0/frame_00000.jpg), не фотография робота. Рамки `[85,64,170,128]` и `[99,143,150,185]` взяты из автоматически составленной [аннотации](https://github.com/overbaffe1/Vision-Action-Data-Factory/blob/afe7ed98c7f7db8efc27c06201b455788163a07a/annotations.jsonl#L1-L4); четыре ярлыка — четыре записи об одном файле.
-- **06 / Перфолента.** Четыре отметки на каждой полосе — соседние строки одного плана. Во второй полосе расстояние между ними разделено на 1,3. Это временная шкала исполнения, **не** частота сетевых запросов: [в протоколе](https://github.com/overbaffe1/Green-Challenge/blob/5e27768309ef18f0422b218d5daee9f3778198f4/docs/ARCHITECTURE.md#why-the-request-rate-is-fixed) интервал запросов остаётся равным 80 мс.
-- **07 / Рельеф.** Одна и та же сетка вероятностей напечатана краской и записана треугольниками в STL. [Рецепт ниже](#как-построен-рельеф).
-- **08 / Хронометр.** Обе полосы начинаются с нуля. Их длины соответствуют `ref_neg_sec` и `fast_neg_1token_sec` из блока [`equivalence`](https://github.com/overbaffe1/3D-DIT-Distillation/blob/d65823d79066eb6e67a722d8a3db2f4153739ac7/fetched_info/solver_experiments.json#L2-L12). Это сохранённые замеры проекта, не новый запуск на GPU.
-- **09 / Запас.** Орбита — иллюстрация, но уровень на шкале взят из [строки планировщика](https://github.com/overbaffe1/CosmoH/blob/828e19eca78b6392da9610b2c04f20fcc199094a/solutions/fuel-contour/docs/evidence/balance-example.json): `inventory_t / capacity_t`, то есть 20,0144 из 70 т в конце первого дня.
+Как у [марок в gitEdit](https://github.com/overbaffe1/gitEdit#марки-вместо-меню), рисунок движется, а подпись остаётся на месте. У каждой марки два отдельных SVG: петля и её первый кадр. `<picture>` выбирает петлю только при `prefers-reduced-motion: no-preference`.
+
+[Скрипт печати](../tools/print_hackathons.py) собирает семь пар из корня альбома (Python 3.10+, без сети и внешних пакетов):
+
+```sh
+python3 tools/print_hackathons.py
+```
+
+## Архив иллюстраций
+
+Ранние неподвижные иллюстрации и их исходные данные сохранены отдельно от галереи:
+
+- **[03 / Два талона](../assets/trace-proof.svg).** Номера на билетах — пара из [теста Guardian-of-Truth](https://github.com/overbaffe1/Guardian-of-Truth/blob/7def70e18a9b3398536575eb3245c97877362089/tests/test_signals.py#L50-L59), не данные пассажиров.
+- **[04 / Переписка](../assets/handoff-proof.svg).** Две стрелки — условный пример для [правила `deadlock`](https://github.com/overbaffe1/Coordination-Referee/blob/72593fec80e6d42e4046d29ca7d84e95838d8835/sol/localize.py#L78-L90), а не выдержка из чужого диалога. Правило получает класс сбоя на вход и определяет ход.
+- **[05 / Контактный лист](../assets/frame-proof.svg).** Это чертёж в координатах [демокадра 256 × 256](https://github.com/overbaffe1/Vision-Action-Data-Factory/blob/afe7ed98c7f7db8efc27c06201b455788163a07a/data/final_input/libero_episode_0/frame_00000.jpg), не фотография робота. Рамки `[85,64,170,128]` и `[99,143,150,185]` взяты из автоматически составленной [аннотации](https://github.com/overbaffe1/Vision-Action-Data-Factory/blob/afe7ed98c7f7db8efc27c06201b455788163a07a/annotations.jsonl#L1-L4); четыре ярлыка — четыре записи об одном файле.
+- **[06 / Перфолента](../assets/tempo-proof.svg).** Четыре отметки на каждой полосе — соседние строки одного плана. Во второй полосе расстояние между ними разделено на 1,3. Это временная шкала исполнения, **не** частота сетевых запросов: [в протоколе](https://github.com/overbaffe1/Green-Challenge/blob/5e27768309ef18f0422b218d5daee9f3778198f4/docs/ARCHITECTURE.md#why-the-request-rate-is-fixed) интервал запросов остаётся равным 80 мс.
+- **[07 / Рельеф](../assets/qaoa-proof.svg).** Одна и та же сетка вероятностей напечатана краской и записана треугольниками в STL. [Рецепт ниже](#как-построен-рельеф).
+- **[08 / Хронометр](../assets/latency-proof.svg).** Обе полосы начинаются с нуля. Их длины соответствуют `ref_neg_sec` и `fast_neg_1token_sec` из блока [`equivalence`](https://github.com/overbaffe1/3D-DIT-Distillation/blob/d65823d79066eb6e67a722d8a3db2f4153739ac7/fetched_info/solver_experiments.json#L2-L12). Это сохранённые замеры проекта, не новый запуск на GPU.
+- **[09 / Запас](../assets/orbit-proof.svg).** Орбита — иллюстрация, но уровень на шкале взят из [строки планировщика](https://github.com/overbaffe1/CosmoH/blob/828e19eca78b6392da9610b2c04f20fcc199094a/solutions/fuel-contour/docs/evidence/balance-example.json): `inventory_t / capacity_t`, то есть 20,0144 из 70 т в конце первого дня.
 
 ## Как построен рельеф
 

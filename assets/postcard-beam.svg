@@ -147,7 +147,7 @@
         <text x="49" y="168" font-family="Georgia,'DejaVu Serif','Times New Roman',serif" font-size="97" letter-spacing="-5" fill="#173c42">Альбом</text>
         <text x="50" y="248" font-family="Georgia,'DejaVu Serif','Times New Roman',serif" font-style="italic" font-size="81" letter-spacing="-4.4" fill="#173c42">открытого кода<tspan fill="#b94932">.</tspan></text>
         <path d="M54 290h32" stroke="#b94932" stroke-width="2.2"/>
-        <text x="100" y="297" font-family="'Segoe UI',Arial,'DejaVu Sans',sans-serif" font-size="21" fill="#415a55">От маяка на слайде до запасов на орбите.</text>
+        <text x="100" y="297" font-family="'Segoe UI',Arial,'DejaVu Sans',sans-serif" font-size="21" fill="#415a55">Маяк, кристалл и семь марок с хакатонов.</text>
         <path d="M54 345h600" stroke="#a8a793" stroke-width="1"/>
         <g font-family="'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace" font-size="13" letter-spacing="1.5" fill="#3c5955">
           <text x="54" y="376">КОЛЛЕКЦИЯ 01—09</text>
