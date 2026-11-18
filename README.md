@@ -100,10 +100,7 @@ endsolid field_crystal
 
 ## Участие в хакатонах
 
-<h3 align="center">
-  <picture><img src="art/dividers/ai-journey.svg" width="640" alt=""></picture><br>
-  AI Journey Contest 2026
-</h3>
+<h3 align="center"><picture><img src="art/dividers/ai-journey.svg" width="640" alt=""></picture><br>AI Journey Contest 2026</h3>
 
 <p align="center">
   <a href="https://github.com/overbaffe1/Guardian-of-Truth"><picture>
@@ -132,10 +129,7 @@ endsolid field_crystal
   </picture></a>
 </p>
 
-<h3 align="center">
-  <picture><img src="art/dividers/cosmohack.svg" width="640" alt=""></picture><br>
-  КосмоХакатон 2026
-</h3>
+<h3 align="center"><picture><img src="art/dividers/cosmohack.svg" width="640" alt=""></picture><br>КосмоХакатон 2026</h3>
 
 <p align="center">
   <a href="https://github.com/overbaffe1/CosmoH"><picture>
