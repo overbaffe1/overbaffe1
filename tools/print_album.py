@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INK = '#173c42'
 VERMILION = '#b94932'
-COLLECTION = 'КОЛЛЕКЦИЯ 01—09'
+COLLECTION = 'КОЛЛЕКЦИЯ 01—11'
 MONO = "'SFMono-Regular',Consolas,'DejaVu Sans Mono',monospace"
 SERIF = "Georgia,'DejaVu Serif','Times New Roman',serif"
 SANS = "'Segoe UI',Arial,'DejaVu Sans',sans-serif"
@@ -96,7 +96,7 @@ def postcard(compact, motion):
         <text x="49" y="168" font-family="{SERIF}" font-size="97" letter-spacing="-5" fill="{INK}">Альбом</text>
         <text x="50" y="248" font-family="{SERIF}" font-style="italic" font-size="81" letter-spacing="-4.4" fill="{INK}">открытого кода<tspan fill="{VERMILION}">.</tspan></text>
         <path d="M54 290h32" stroke="{VERMILION}" stroke-width="2.2"/>
-        <text x="100" y="297" font-family="{SANS}" font-size="21" fill="#415a55">Маяк, кристалл и семь марок с хакатонов.</text>
+        <text x="100" y="297" font-family="{SANS}" font-size="21" fill="#415a55">Маяк, кристалл и девять марок с хакатонов.</text>
         <path d="M54 345h600" stroke="#a8a793" stroke-width="1"/>
         <g font-family="{MONO}" font-size="13" letter-spacing="1.5" fill="#3c5955">
           <text x="54" y="376">{COLLECTION}</text>

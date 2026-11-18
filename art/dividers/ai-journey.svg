@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="60" viewBox="0 0 640 60" role="img" aria-labelledby="title desc">
   <title id="title">AI Journey Contest 2026 · маршрутная виньетка</title>
-  <desc id="desc">Шесть медных станций соединены бирюзовыми линиями. На стыке лент — двухцветная стрелка компаса.</desc>
+  <desc id="desc">Бирюзовый маршрут с пятью медными отметками. Средняя — на оси компаса.</desc>
   <defs>
     <linearGradient id="enamel" x2="0" y2="1">
       <stop stop-color="#254e51"/><stop offset=".55" stop-color="#163c44"/><stop offset="1" stop-color="#294f50"/>
@@ -24,8 +24,8 @@
     <use href="#tape" fill="url(#hatch)"/>
     <path d="M12 19h260l12-5h72l12 5h260M12 41h260l12 5h72l12-5h260" stroke="#beb396" stroke-width=".7" fill="none"/>
     <use href="#rails"/><use href="#rails" transform="translate(640 0) scale(-1 1)"/>
-    <use href="#stop" x="44" y="32.5"/><use href="#stop" x="151" y="35"/><use href="#stop" x="236" y="24"/>
-    <use href="#stop" x="404" y="24"/><use href="#stop" x="489" y="35"/><use href="#stop" x="596" y="32.5"/>
+    <use href="#stop" x="44" y="32.5"/><use href="#stop" x="151" y="35"/>
+    <use href="#stop" x="489" y="35"/><use href="#stop" x="596" y="32.5"/>
   </g>
   <g transform="translate(320 30)">
     <path d="m0-29 20 8 9 21-9 21-20 8-20-8-9-21 9-21Z" fill="#ebd7ae" stroke="#9b876d"/>
@@ -36,7 +36,7 @@
     <g transform="rotate(38)" stroke-linejoin="round">
       <path d="M0-22 6 2 0 21-6-2Z" fill="#b9694e" stroke="#142f37"/>
       <path d="m0-22 6 24-6-3Z" fill="#f4c7a0"/><path d="m0 21-6-23 6 3Z" fill="#d6e2c8"/>
-      <circle r="2.6" fill="#e1cda4" stroke="#28484a"/>
+      <use href="#stop"/>
     </g>
   </g>
 </svg>
